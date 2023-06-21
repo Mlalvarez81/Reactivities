@@ -53,5 +53,10 @@ import { router } from '../router/Routes';
             console.log(error);
         }
     }
+
+    setImage = (image: string) => {
+        if (this.user)
+            this.user.image = image;
+    }
 }
 

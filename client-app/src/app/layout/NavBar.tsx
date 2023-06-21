@@ -42,7 +42,7 @@ export default observer(function NavBar() {
             <DropdownMenu>
               <DropdownItem
                 as={Link}
-                to={`/profile/${user?.username}`}
+                to={`/profiles/${user?.username}`}
                 text="My Profile"
                 icon="user"
               />
