@@ -32,6 +32,7 @@ namespace API.Extensions
                          .AllowAnyMethod()
                          .AllowAnyHeader()
                          .AllowCredentials()
+                         .AllowCredentials()
                          .WithOrigins("http://localhost:3000");
                 });
             });
@@ -44,6 +45,8 @@ namespace API.Extensions
             services.AddScoped<IUserAccessor, UserAccessor>();
             services.AddScoped<IPhotoAccesor, PhotoAccesor>();
             services.Configure<CloudinarySettings>(config.GetSection("Cloudinary"));
+            services.AddSignalR();
+
             return services;
         }
     }
